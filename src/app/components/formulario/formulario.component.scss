@@ -1,0 +1,49 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container{
+    /*width: 100%;*/
+    width: 1100px;
+    margin: 0px auto;           
+    border: 1px solid black;
+    
+}
+
+header{
+    background:green ;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+    color: black;
+    border-bottom: 3px solid black;
+}
+
+.clearfix{
+    clear: both;
+
+}
+
+#content{
+    clear: both;
+    width: calc(100% - 80px);
+    min-height: 350px ;
+    background:white;
+    padding: 40px;            
+}
+
+footer{
+    background:black;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}

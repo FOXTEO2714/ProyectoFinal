@@ -19,6 +19,6 @@ export class ItemComponent implements OnInit {
    eliminar() : void {
     // eliminamos lista tareas de acuerdo a la posicion de la memoria
     this.prSvc.tareas = this.prSvc.tareas.filter(cadaTarea => cadaTarea !== this.tarea);  
-    
+    this.prSvc.deleteTarea(this.tarea).subscribe((resp) => console.log('RESPONSE', resp));
   }
 }

@@ -1,7 +1,36 @@
-<input type="text" name="tarea" [(ngModel)]="usuario" placeholder="Usuario">
-&nbsp;
-<input type= "text" name="Tarea" [(ngModel)]="descripcion"placeholder="Descripcion">
-&nbsp;
-<button (click)="procesar()">Agregar tarea</button> 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PROYECTO FINAL ANGULAR</title>    
+        <link rel="stylesheet" href="formulario.component.scss"/>
+        
+    </head>
+    <body>
+        
+        <div id="container">
+            <header>
+                <h1>PROYECTO FINAL ANGULAR</h1>                                    
+            </header>
+            <section id="content">
+            
+                <input type="text" name="tarea" [(ngModel)]="usuario" placeholder="Usuario">
+                &nbsp;
+                <input type= "text" name="Tarea" [(ngModel)]="descripcion"placeholder="Descripcion">
+                &nbsp;
+                <button (click)="procesar()">Agregar tarea</button> 
+                <app-lista></app-lista>
+            </section>                      
+            
+            <div class="clearfix"></div>
+            <footer>
+                José Rufino Aley Pérez WEB &copy; 2020
+            </footer>
+        </div>
+    </body>  
+    </html>      
+
+
 
 

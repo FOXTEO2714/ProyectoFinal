@@ -15,18 +15,19 @@ export class FormularioComponent implements OnInit {
   ngOnInit(): void {
   }
 
-// Este metodo se ejecuta cada vez que el ususario hace click en el boton
+// Este metodo se ejecuta cada vez que el usuario hace click en el boton
   procesar(): void{
     //console.log(this.descripcion)
     // UNDEFINED "VALOR" ""
     if (this.descripcion  && this.descripcion !== '') {
       console.log(this.descripcion);
       const tarea = new Tarea();
-      tarea.usuario = this.usuario;
       tarea.descripcion = this.descripcion;
-      tarea.fecha = new Date();      
-      this.tareaSvc.tareas.push(tarea);
+      tarea.fecha = new Date();
+      tarea.usuario = this.usuario;
+      tarea.estado = 'A';
       console.log(tarea);
+      this.tareaSvc.addTarea(tarea).subscribe((resp) => console.log('RESPONSE', resp));
     }
 
   }

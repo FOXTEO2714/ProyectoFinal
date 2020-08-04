@@ -8,9 +8,12 @@ import { ServiceService } from 'src/app/services/service.service';
 })
 export class ListaComponent implements OnInit {
 
-  constructor(public service: ServiceService) { }
-
-  ngOnInit(): void {
+  constructor(public service: ServiceService) {
+    
   }
 
+    ngOnInit(): void {
+      this.service.getTareas().subscribe(resp => {
+    });
+  }
 }
